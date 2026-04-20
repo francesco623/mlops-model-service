@@ -1,0 +1,11 @@
+mlflow
+jupyter
+scikit-learn
+pandas
+seaborn
+optuna
+xgboost
+fastparquet
+boto3
+fastapi
+uvicorn
