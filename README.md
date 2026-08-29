@@ -1,6 +1,6 @@
 # mlops-model-service
 
-XGBoost model trained on the Titanic dataset, served via FastAPI and containerized with Docker. Built as the Level 2 checkpoint of my MLOps learning roadmap.
+XGBoost model trained on the Titanic dataset, served via FastAPI and containerized with Docker.
 
 ## Stack
 
