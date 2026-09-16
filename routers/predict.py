@@ -8,7 +8,7 @@ from typing import Optional
 # mlflow.set_tracking_uri("sqlite:///mlflowP2.db")
 
 # Load model once at startup
-model = mlflow.xgboost.load_model("mlruns/2/models/m-71068e38fa0847cc9db3d83bdfe697dd/artifacts")
+model = mlflow.xgboost.load_model("model")
 
 router = APIRouter()
 
