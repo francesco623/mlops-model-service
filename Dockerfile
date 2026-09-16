@@ -17,6 +17,17 @@ COPY tests/ tests/
 
 CMD [ "python", "-m", "pytest", "-v" ]
 
+FROM base AS train
+
+COPY requirements-training.txt .
+
+RUN pip install --no-cache-dir -r requirements-training.txt
+
+COPY mlflow_project2.py .
+COPY dataset/ dataset/
+
+CMD ["python3", "mlflow_project2.py"]
+
 FROM base AS serve
 
 COPY main.py .
