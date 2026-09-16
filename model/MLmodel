@@ -5,7 +5,7 @@ flavors:
       conda: conda.yaml
       virtualenv: python_env.yaml
     loader_module: mlflow.xgboost
-    python_version: 3.13.1
+    python_version: 3.13.15
   xgboost:
     code: null
     data: model.ubj
@@ -14,7 +14,7 @@ flavors:
     xgb_version: 3.2.0
 mlflow_version: 3.11.1
 model_id: null
-model_size_bytes: 384777
-model_uuid: 09daf28534564c8586aa6885597278e1
+model_size_bytes: 1009950
+model_uuid: cd27b120e170424d9255ae7907a2af49
 prompts: null
-utc_time_created: '2026-09-16 18:44:47.458280'
+utc_time_created: '2026-09-16 22:49:39.885252'

@@ -13,3 +13,12 @@ services:
       target: test
     profiles:
       - test
+
+  train:
+    build:
+      context: .
+      target: train
+    profiles:
+      - train
+    volumes:
+      - ./model:/mlops-model-service/model
