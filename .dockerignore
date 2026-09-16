@@ -4,6 +4,5 @@ __pycache__/
 *.pyc
 mlruns/           
 *.db              
-mlflow_project2.py  
 .env              
 .git/             

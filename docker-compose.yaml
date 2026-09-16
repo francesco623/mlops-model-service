@@ -1,0 +1,24 @@
+services:
+  api:
+    ports:
+      - "8000:8000"
+
+    build:
+      context: .
+      target: serve
+  test:
+
+    build:
+      context: .
+      target: test
+    profiles:
+      - test
+
+  train:
+    build:
+      context: .
+      target: train
+    profiles:
+      - train
+    volumes:
+      - ./model:/mlops-model-service/model
