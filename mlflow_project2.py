@@ -1,17 +1,17 @@
-from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import mlflow
 import optuna
+import pandas as pd
 import xgboost as xgb
 
-# Use titanic.data and titanic.target directly — don't go through .frame
-titanic = fetch_openml(name='titanic', version=1, as_frame=True)
+data = pd.read_csv("dataset/data.csv")
+target = pd.read_csv("dataset/target.csv")
 
-X = titanic.data.select_dtypes(include='number')  # keep numeric columns only
-X['sex'] = (titanic.data['sex'] == 'male').astype(int)  # male=1, female=0, keeping only numbers exclude the column "sex", so we convert it to number
+X = data.select_dtypes(include='number')  # keep numeric columns only
+X['sex'] = (data['sex'] == 'male').astype(int)  # male=1, female=0, keeping only numbers exclude the column "sex", so we convert it to number
 
-y = titanic.target.astype(int) # -> note: titanic.target stores columns as strings, when they get compared, they are compared to integers, raising error
+y = target['survived'] 
 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
